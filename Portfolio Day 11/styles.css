@@ -1,0 +1,485 @@
+/* ---------------------------------Обнуляющие стили------------------------------------------------------------------------------ */
+
+* {
+	padding: 0px;
+	margin: 0px;
+	border: 0px;
+}
+
+*,
+*:before,
+*:after {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+aside,
+nav,
+footer,
+header,
+section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+
+main {
+	flex: 1 1 auto;
+}
+
+body,
+html {
+	height: 100%;
+}
+
+input::-ms-clear {
+	display: none;
+}
+
+button {
+	background-color: transparent;
+	cursor: pointer;
+}
+
+button::-moz-focus-inner {
+	padding: 0;
+	border: 0;
+}
+
+a,
+a:visited {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+ul li {
+	list-style: none;
+}
+
+img {
+	vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: inherit;
+	font-size: inherit;
+}
+
+/* -------------------------------------------Основные стили------------------------------------------------------------------------------------- */
+
+/* @import url('https://fonts.googleapis.com/css2?family=Inter&family=Montserrat:wght@700&family=Oswald:wght@200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Oswald:wght@200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Montserrat:wght@700&family=Oswald:wght@200;300;400;500;600;700&family=Roboto&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Oswald:wght@200;300;400;500;600;700&family=Roboto&display=swap');
+
+.container{
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+header{
+    background-color: #07203F; 
+    border-bottom: 2px solid #FFF;
+}
+
+footer{
+    background-color: #07203F; 
+    border-top: 2px solid #FFF
+}
+
+
+.header_container, .footer_container{
+    display: flex;
+    justify-content: space-between;
+    color: #FFF;
+    padding: 55px 0;
+}
+
+.nickname{
+    font-family: Montserat, sans-serif;
+    font-weight: 700;
+    font-size: 36px;
+}
+
+.nickname p{
+    margin: 0;
+    padding: 0;
+}
+
+nav ul{
+    display: flex;
+    gap: 40px;
+    justify-content: flex-end;
+}
+
+.link{
+    color: #FFF;
+    font-size: 36px;
+    font-family: Inter;
+    text-transform: uppercase;
+    margin-bottom: 1px;
+    border-bottom: 1px solid #FFF;
+}
+
+footer .link{
+    margin-bottom: 0;
+    border: 0;
+}
+
+.link:hover, .link:active{
+    color: gray;
+    border-bottom: 1px solid gray;
+}
+
+section{
+    background-color: #07203F; 
+}
+
+.about_container{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 135px; 
+    padding-bottom: 150px;
+
+}
+
+.info{
+   padding-top: 25px; 
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+}
+
+
+.info h2{
+    color: #D9D9D9;
+    font-family: Montserrat;
+    font-weight: 800;
+    font-size: 64px;
+    text-transform: uppercase;
+}
+
+.info_text{
+    color:#D9D9D9;
+    font-family: Roboto;
+    font-weight: 400;
+    font-size: 36px;
+}
+
+.get_in_touch_button{
+    text-align: center;
+    width: 100%;
+    background-color: #D9D9D9;
+    padding: 28px 75px;
+    border-radius: 90px;
+
+}
+
+.get_in_touch_button{
+    font-family: Inter;
+    font-weight: 700;
+    font-size: 40px;
+    color: #000;
+    text-transform: uppercase;
+    
+}
+
+.get_in_touch_button:hover, .get_in_touch_button:active{
+    background-color: #000;
+    color: #D9D9D9;
+}
+
+.photo{
+    width: 516px;
+    height: 516px;
+    border-radius: 384px;
+    border-bottom: 5px solid #FFF;
+    overflow:hidden;
+}
+
+.photo img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.skills{
+    background-image: url("https://s3-alpha-sig.figma.com/img/6083/7445/0b8192d8b3f6171a16dbc23ffcca9c13?Expires=1694995200&Signature=jV~orR96bf~yRc~bbsV5v-WdWS7oTIJsYLjW8s9AH2Fy7swfFN9ODZ78wZp~V5oixkeXB0o2jb1WNI7xAK33720FZSDzktyVMXnpLjgeKOy5WGSk0J03FyKVwvKGDXEOgQrehAOxIR12Y0LrQXUVN7IzeAZPiIMahfBvZG37zYAEbS6s8ckqli9nuoAFKrs~z~7LNDH2ecxQFTdJi8AL4EeZhEYH0kt84BwGjo9szhI-Q3MvddVSIMytTAsf0yKSHSNv5HrCYUI6oKCt--I53Gt8oo-UQQQs63lbC-RSWuN3TDbX3K8Co6oEhdWDgL2LppSw3LITEnPvzDRTzKaAHA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.skills_container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.skills_block{
+    padding-top: 135px;
+    padding-bottom: 135px;
+}
+
+.title{
+    font-family: Montserrat;
+    font-size: 72px;
+    font-weight: 800;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.cards{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 70px;
+}
+
+.card{
+    border: 5px solid #D9AA90;
+    width: 30%;
+    box-sizing: border-box;
+}
+
+.card:nth-child(even){
+    border-color: #07203F;
+}
+
+.image_div{
+    padding-top: 60%;
+	position: relative;
+	width: 100%;
+    background-color: grey;
+}
+
+.image_div img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.image_div img  {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.sign_div{
+    text-align: center;
+    padding-top: 38px;
+    padding-bottom: 39px;
+    font-size: 58px;
+    font-weight: 800;
+    background-color: #07203F;
+    color: white;
+    text-transform: uppercase;
+}
+
+.card:nth-child(even) .sign_div{
+    background-color: #D9AA90;
+}
+
+.projects_container{
+    padding-top: 135px;
+    padding-bottom: 150px;
+}
+
+.projects_container p{
+    color: #FFF
+}
+
+.projects{
+    padding-top: 70px;
+    display: flex;
+    flex-direction: column;
+    gap: 135px;
+}
+
+.project{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.project:nth-child(even){
+    flex-direction: row-reverse;
+}
+
+.project_image{
+	padding-top: 33%;
+	position: relative;
+	width: 48%;
+
+}
+.project_image img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+
+.project_title{
+    font-size: 48px;
+    color: white;
+}
+
+.project h3{
+    text-align: left;
+}
+
+.project_text{
+    padding-top: 121px;
+    text-align: left;
+}
+
+.form_section{
+     background-color: #EADED4;
+}
+.form_container{
+    padding-top: 135px; 
+    padding-bottom: 150px;
+    text-align: center;
+}
+
+.form{
+    display: inline-block;
+}
+
+.form_title{
+    margin-bottom: 70px;
+}
+.form_wrapper{
+    background-color: #FFF;
+    padding: 77px 65px 78px 65px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+label{
+    text-align: left;
+    background-color: rgba(234, 222, 212, 0.35);
+    padding: 24px 36px 24px 31px;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 800;
+}
+.inputs{
+    display: flex;
+    gap: 38px;
+    flex-direction: column;
+}
+
+input[type=text], input[type=email], input[type=tel]{
+    border: 1px solid transparent;
+    margin-left: 5px;
+    padding: 5px;
+    width: 80%;
+    background-color:  rgb(234, 222, 212, 0);
+}
+
+input[type=text]:focus, input[type=email]:focus, input[type=tel]:focus{
+    border: 1px solid black;
+    box-shadow: 0;
+    outline: 0;
+}
+
+.buttons{
+    padding-top: 77px;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.buttons button{
+    background-color: rgba(234, 222, 212, 0.80);
+    padding: 16px 25px 16px 25px;
+    font-family: Montserrat;
+    font-size: 36px;
+    font-weight: 500;
+}
+ 
+.contacts{
+    background-image: url("https://s3-alpha-sig.figma.com/img/f4d8/368f/21dcf520c4acf394d42a992466a3d7f9?Expires=1694995200&Signature=T3KyJjwRnh0xgQAF8zahIziirZbprojQieobqDH8PPScubmFiRz0xHljg3PuoMz6V35io2K~uw7Wz2rzI4Gid1JtDr4acvwSW1ebMz8GG7nbsYv4iaHzuk-DfJEc4HFA20EKip2Ut4uCCkjoKV7wcCiBWtjty32NXMOPdRFsOAYWyD4S7ZbazmT7E6D6ID0Js6AEtVai1LnPkZqgkrQRex4qNu9NyIWUjGb1fhxvWrNWhB8fOs1CzSZ~Y1Id8isEW9C8UOrntJ452tukoPdNoxycYRy5a-CzcpfcS-zAeGqjwdj5uznR8G4wDQ7wzE4F7UlfT9Nh64lpgIxkHNebHA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4");
+}
+
+.contacts_container{
+    padding-top: 135px;
+    padding-bottom: 180px ;
+}
+
+.contact_cards{
+    margin-top: 65px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.contact_card{
+    width: 30%;
+    display: block;
+    background-color: #07203F;
+    padding-top: 116px;
+    padding-bottom: 85px;
+    text-align: center;
+}
+
+.contact_card:nth-child(even){
+    background-color: #D9AA90;
+}
+
+.contact_card p{
+    color: #FFF;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 48px;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: 22px;
+}
+
+
+.contact_link{
+    display: inline-block;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.contact_card a{
+    width: 100%;
+    border-radius: 25px;
+    /* padding: 10px 40px; */
+    padding-right: 25px;
+    padding-left: 25px;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 40px;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #000;
+    background-color: #D9D9D9;
+}
+
+.contact_link a:hover, .contact_link a:hover{
+    background-color: white;
+}
